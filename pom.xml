@@ -12,23 +12,13 @@
     <url>http://projects.javaclinic.com/spring-simple-web</url>
 
     <properties>
-        <junit.version>4.11</junit.version>
-        <jdk.version>1.7</jdk.version>
-        <spring.version>4.1.2.RELEASE</spring.version>
+        <spring.version>4.1.5.RELEASE</spring.version>
         <servlet-api.version>3.0.1</servlet-api.version>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
     <dependencies>
-
-        <!-- JUnit dependency --> 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
 
         <!-- Spring dependency -->
         <dependency>
@@ -63,7 +53,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>2.1.1</version>
+                <version>2.6</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                 </configuration>
@@ -72,6 +62,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
             </plugin>
         </plugins>
     </build>
